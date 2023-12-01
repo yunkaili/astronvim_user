@@ -32,6 +32,32 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- neogen
+    ["<leader>nf"] = {
+      function() require("neogen").generate { type = "func" } end,
+      desc = "Generate Annotations for function",
+    },
+    ["<leader>nc"] = {
+      function() require("neogen").generate { type = "class" } end,
+      desc = "Generate Annotations for class",
+    },
+    -- glow
+    ["<leader>mp"] = {
+      "<cmd>Glow<cr>",
+      desc = "Markdown Preview",
+    },
+    ["<leader><leader>j"] = {
+      "<cmd>HopVertical<cr>",
+      desc = "keep the cursor column position as the same as your current cursor",
+    },
+    ["<leader><leader>k"] = {
+      "<cmd>HopLineStart<cr>",
+      desc = "hint the first non-whitespace character of each line",
+    },
+    ["<leader><leader>l"] = {
+      "<cmd>HopWord<cr>",
+      desc = "hint all words in your buffer",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
