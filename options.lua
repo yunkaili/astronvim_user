@@ -9,8 +9,8 @@ return {
     wrap = false, -- sets vim.opt.wrap
     shiftwidth = 4, -- Number of space inserted for indentation
     tabstop = 4, -- Number of space in a tab
-    colorcolumn = "88", -- highlight column  
-    textwidth = 88, -- for all text files set 'textwidth' to 88 characters. 
+    colorcolumn = "79", -- highlight column  
+    textwidth = 79, -- for all text files set 'textwidth' to 88 characters. 
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
