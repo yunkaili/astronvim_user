@@ -29,7 +29,9 @@ return {
       snippet_engine = "luasnip",
       languages = {
         python = { template = { annotation_convention = "google_docstrings" } },
-        sh = { template = { annotation_convention = "google_bash" } }
+        sh = { template = { annotation_convention = "google_bash" } },
+        c = { template = { annotation_convention = "doxygen" } },
+        cpp = { template = { annotation_convention = "doxygen" } }
       },
     },
   },
@@ -290,6 +292,29 @@ return {
         })
     end,
   },
+	-- Switch between header and implementation files
+	-- {
+	-- 	"nvim-lua/plenary.nvim",
+	-- 	lazy=False
+	-- },
+ --  {
+ --    "jakemason/ouroboros",
+ --    lazy = false,
+ --    config = function()
+	-- 	-- these are the defaults, customize as desired
+	-- 	require('ouroboros').setup({
+	-- 	    extension_preferences_table = {
+	-- 	          c = {h = 2, hpp = 0},
+	-- 	          h = {cpp = 1, c = 0},
+	-- 	          cpp = {hpp = 0, h = 2},
+	-- 	          hpp = {cpp = 2, c = 0},
+	-- 	    },
+	-- 	    -- if this is true and the matching file is already open in a pane, we'll
+	-- 	    -- switch to that pane instead of opening it in the current buffer
+	-- 	    switch_to_open_pane_if_possible = true,
+	-- 	})
+ --    end,
+ --  },
   -- theme
   {
     "shaunsingh/nord.nvim",
